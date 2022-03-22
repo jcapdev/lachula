@@ -8,11 +8,17 @@ window.onload = function(){
             document.getElementById('selected_lang').value = 'es'
             $("#selected_lang").val("es");
             translator.lang("es");
+            var uno = document.getElementById('dropdownMenuButton');
+            uno.innerHTML = 'Español';
         }
         else{
             document.getElementById('selected_lang').value = 'en'
             $("#selected_lang").val("en");
             translator.lang("en");
+
+            var uno = document.getElementById('dropdownMenuButton');
+            uno.innerHTML = 'English';
+
             $("#name1").attr("placeholder", "Name:");
             $("#client1").attr("placeholder", "Company:");
             $("#email1").attr("placeholder", "Email:");
