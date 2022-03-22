@@ -1996,9 +1996,17 @@
 <script>
     function lenguaje () {
         translator.lang("en");
+        var lengua = document.getElementById('dropdownMenuButton');
+          if (lengua.innerHTML == 'English') 
+             lengua.innerHTML = 'Español';
+          else lengua.innerHTML = 'English';
     }
     function idioma(){
         translator.lang("es");
+        var lengua = document.getElementById('dropdownMenuButton');
+          if (lengua.innerHTML == 'Español') 
+             lengua.innerHTML = 'English';
+         else lengua.innerHTML = 'Español'; 
     }
                 
 

@@ -4,20 +4,19 @@ window.onload = function(){
         var timezone = ['America/Chihuahua','Africa/Malabo','America/Argentina/Buenos_Aires','America/Argentina/Catamarca','America/Argentina/Cordoba','America/Argentina/Jujuy','America/Argentina/La_Rioja','America/Argentina/Mendoza','America/Argentina/Rio_Gallegos','America/Argentina/San_Juan','America/Argentina/Tucuman','America/Argentina/Ushuaia','America/Asuncion','America/Bogota','America/Campo_Grande','America/Cancun','America/Caracas','America/Costa_Rica','America/El_Salvador','America/Guatemala','America/Guayaquil','America/Havana','America/Hermosillo','America/La_Paz','America/Lima','America/Managua','America/Mazatlan','America/Merida','America/Mexico_City','America/Monterrey','America/Montevideo','America/Panama','America/Puerto_Rico','America/Santo_Domingo','America/Tegucigalpa','America/Tijuana','Chile/Continental','Europe/Andorra','Europe/Gibraltar','Europe/Madrid','Pacific/Galapagos','America/Sao_Paulo','America/Araguaina','America/Bahia','America/Belem','America/Boa_Vista','America/Campo_Grande','America/Fortaleza','America/Maceio','America/Manaus','America/Noronha','America/Porto_Velho','America/Rio_Branco'];
         var code= response.timezone;
         var index = timezone.indexOf(code);
+        var lenguaje = document.getElementById('dropdownMenuButton');
+
         if(index > -1){
             document.getElementById('selected_lang').value = 'es'
             $("#selected_lang").val("es");
             translator.lang("es");
-            var uno = document.getElementById('dropdownMenuButton');
-            uno.innerHTML = 'Español';
+            lenguaje.innerHTML = 'Español';
         }
         else{
             document.getElementById('selected_lang').value = 'en'
             $("#selected_lang").val("en");
-            translator.lang("en");
-
-            var uno = document.getElementById('dropdownMenuButton');
-            uno.innerHTML = 'English';
+            translator.lang("en");            
+            lenguaje.innerHTML = 'English';
 
             $("#name1").attr("placeholder", "Name:");
             $("#client1").attr("placeholder", "Company:");
