@@ -5,18 +5,23 @@ window.onload = function(){
         var code= response.timezone;
         var index = timezone.indexOf(code);
         var lenguaje = document.getElementById('dropdownMenuButton');
+        var lenguajeMov = document.getElementById('dropdownMenuButtonMov');
+
 
         if(index > -1){
             document.getElementById('selected_lang').value = 'es'
             $("#selected_lang").val("es");
             translator.lang("es");
             lenguaje.innerHTML = 'Español';
+            lenguajeMov.innerHTML = 'Español';
+            
         }
         else{
             document.getElementById('selected_lang').value = 'en'
             $("#selected_lang").val("en");
             translator.lang("en");            
             lenguaje.innerHTML = 'English';
+            lenguajeMov.innerHTML = 'English';    
 
             $("#name1").attr("placeholder", "Name:");
             $("#client1").attr("placeholder", "Company:");
