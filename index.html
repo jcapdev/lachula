@@ -45,6 +45,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar-nav" data-offset="75" class="offset-nav">
@@ -112,11 +113,22 @@
                         <a class="nav-link pagescroll trn" href="#certificacion">Certificaciones</a>
 
                     </li>
+                    <li class = "nav-item">
+                        <div class="dropdown nav-item" style="margin-top: 15px;">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: none !important;font-size: 18px;">
+                              Lenguaje / Idioma
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item"  onclick="lenguaje ()"><img src="images/flags/usa.jpg" alt="" class="img-fluid">   English</a>
+                                <a class="dropdown-item" onclick="idioma ()"><img src="images/flags/es.png" alt="" class="img-fluid">   Español</a>                                
+                            </div>
+                          </div>
+                    </li>
 
                 </ul>
 
-            </div>
-
+            </div>           
+            
         </div>
 
         <!--side menu open button-->
@@ -171,6 +183,18 @@
 
                         <a class="nav-link pagescroll trn" href="#certificacion">Certificaciones</a>
 
+                    </li>
+
+                    <li class = "nav-item">
+                        <div class="dropdown nav-item" style="margin-top: 15px;">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: none !important;font-size: 18px;">
+                              Lenguaje / Idioma
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" onclick="lenguaje()"><img src="images/flags/usa.jpg" alt="" class="img-fluid">   English</a>
+                                <a class="dropdown-item" onclick="idioma()"><img src="images/flags/es.png" alt="" class="img-fluid">   Español</a>                                
+                            </div>
+                          </div>
                     </li>
 
                 </ul>
@@ -1967,6 +1991,16 @@
   });
 
 });
+
+</script>
+<script>
+    function lenguaje () {
+        translator.lang("en");
+    }
+    function idioma(){
+        translator.lang("es");
+    }
+                
 
 </script>
 
