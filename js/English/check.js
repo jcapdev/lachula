@@ -7,14 +7,12 @@ window.onload = function(){
         var lenguaje = document.getElementById('dropdownMenuButton');
         var lenguajeMov = document.getElementById('dropdownMenuButtonMov');
 
-
         if(index > -1){
             document.getElementById('selected_lang').value = 'es'
             $("#selected_lang").val("es");
             translator.lang("es");
             lenguaje.innerHTML = 'Español';
             lenguajeMov.innerHTML = 'Español';
-            
         }
         else{
             document.getElementById('selected_lang').value = 'en'
@@ -22,7 +20,7 @@ window.onload = function(){
             translator.lang("en");            
             lenguaje.innerHTML = 'English';
             lenguajeMov.innerHTML = 'English';    
-
+            
             $("#name1").attr("placeholder", "Name:");
             $("#client1").attr("placeholder", "Company:");
             $("#email1").attr("placeholder", "Email:");

@@ -115,7 +115,7 @@
                     </li>
                     <li class = "nav-item">
                         <div class="dropdown nav-item" style="margin-top: 15px;">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonMov" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: none !important;font-size: 18px;">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: none !important;font-size: 18px;">
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item"  onclick="lenguaje ()"><img src="images/flags/usa.jpg" alt="" class="img-fluid">   English</a>
@@ -186,12 +186,11 @@
 
                     <li class = "nav-item">
                         <div class="dropdown nav-item" style="margin-top: 15px;">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: none !important;font-size: 18px;">
-                              
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonMov" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: none !important;font-size: 18px;">
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" onclick="lenguaje()"><img src="images/flags/usa.jpg" alt="" class="img-fluid">   English</a>
-                                <a class="dropdown-item" onclick="idioma()"><img src="images/flags/es.png" alt="" class="img-fluid">   Español</a>                                
+                                <a class="dropdown-item" onclick="lenguajeMov()"><img src="images/flags/usa.jpg" alt="" class="img-fluid">   English</a>
+                                <a class="dropdown-item" onclick="idiomaMov()"><img src="images/flags/es.png" alt="" class="img-fluid">   Español</a>                                
                             </div>
                           </div>
                     </li>
@@ -1992,48 +1991,109 @@
 });
 
 </script>
-<script>
+<script >
     function lenguaje () {
         translator.lang("en");
-        $("#name1").attr("placeholder", "Name:");
-        $("#client1").attr("placeholder", "Company:");
-        $("#email1").attr("placeholder", "Email:");
-        $("#phone1").attr("placeholder", "Phone number:");
-        $("#subject1").attr("placeholder", "Subject:");
-        $("#message1").attr("placeholder", "Message:");
-        $("#lang").val("en");
-        $(".imgtraditional").attr("src", "images/English/TIPOS DE SALSA_TRADICIONAL.png");
-        $(".imggreen").attr("src", "images/English/TIPOS DE SALSA__GREEN.png");
-        $(".imgchip").attr("src", "images/English/TIPOS DE SALSA_CHIPOTLE.png");        
-        $("#pop_tradicional").attr("src", "images/English/TRADICIONAL_EN.png");
-        $("#pop_verde").attr("src", "images/English/VERDE_EN.png");
-        $("#pop_chipotle").attr("src", "images/English/CHIPOTLE_EN.png");
-
         var lengua = document.getElementById('dropdownMenuButton');
           if (lengua.innerHTML == 'English') 
-             lengua.innerHTML = 'Español';
+              lengua.innerHTML = 'Español';
           else lengua.innerHTML = 'English';
+        
+            $("#name1").attr("placeholder", "Name:");
+            $("#client1").attr("placeholder", "Company:");
+            $("#email1").attr("placeholder", "Email:");
+            $("#phone1").attr("placeholder", "Phone number:");
+            $("#subject1").attr("placeholder", "Subject:");
+            $("#message1").attr("placeholder", "Message:");
+            $("#lang").val("en");
+            $(".imgtraditional").attr("src", "images/English/TIPOS DE SALSA_TRADICIONAL.png");
+            $(".imggreen").attr("src", "images/English/TIPOS DE SALSA__GREEN.png");
+            $(".imgchip").attr("src", "images/English/TIPOS DE SALSA_CHIPOTLE.png");
+            
+            $("#pop_tradicional").attr("src", "images/English/TRADICIONAL_EN.png");
+            $("#pop_verde").attr("src", "images/English/VERDE_EN.png");
+            $("#pop_chipotle").attr("src", "images/English/CHIPOTLE_EN.png");
+        
+        
+          
+          
+
     }
+    
+    
+    
     function idioma(){
         translator.lang("es");
+        var lengua = document.getElementById('dropdownMenuButton');
+          if (lengua.innerHTML == 'Español') 
+              lengua.innerHTML = 'English';
+         else lengua.innerHTML = 'Español';
         $("#name1").attr("placeholder", "Nombre:");
         $("#client1").attr("placeholder", "Empresa:");
         $("#email1").attr("placeholder", "Correo electrónico:");
         $("#phone1").attr("placeholder", "Teléfono:");
         $("#subject1").attr("placeholder", "Asunto:");
         $("#message1").attr("placeholder", "Mensaje:");
-        $("#lang").val("en");        
+        $("#lang").val("en");
+        
         $(".imgtraditional").attr("src", "images/tradicionalnodot.png");
         $(".imggreen").attr("src", "images/SalsaVerde (2).png");
         $(".imgchip").attr("src", "images/SalsaChipotle (2).png");
         $("#pop_tradicional").attr("src", "images/POP-UP-FICHATECNICA.png");
         $("#pop_verde").attr("src", "images/2_POP-UP-FICHATECNICA.png");
         $("#pop_chipotle").attr("src", "images/1_POP-UP-FICHATECNICA.png");
-
-        var lengua = document.getElementById('dropdownMenuButton');
+            
+         
+      
+    }
+    
+    function idiomaMov(){
+        translator.lang("es");
+        var lengua = document.getElementById('dropdownMenuButtonMov');
           if (lengua.innerHTML == 'Español') 
-             lengua.innerHTML = 'English';
-         else lengua.innerHTML = 'Español'; 
+              lengua.innerHTML = 'English';
+         else lengua.innerHTML = 'Español';
+        $("#name1").attr("placeholder", "Nombre:");
+        $("#client1").attr("placeholder", "Empresa:");
+        $("#email1").attr("placeholder", "Correo electrónico:");
+        $("#phone1").attr("placeholder", "Teléfono:");
+        $("#subject1").attr("placeholder", "Asunto:");
+        $("#message1").attr("placeholder", "Mensaje:");
+        $("#lang").val("en");
+        
+        $(".imgtraditional").attr("src", "images/tradicionalnodot.png");
+        $(".imggreen").attr("src", "images/SalsaVerde (2).png");
+        $(".imgchip").attr("src", "images/SalsaChipotle (2).png");
+        $("#pop_tradicional").attr("src", "images/POP-UP-FICHATECNICA.png");
+        $("#pop_verde").attr("src", "images/2_POP-UP-FICHATECNICA.png");
+        $("#pop_chipotle").attr("src", "images/1_POP-UP-FICHATECNICA.png");
+            
+         
+      
+    }
+    function lenguajeMov () {
+        translator.lang("en");
+        var lengua = document.getElementById('dropdownMenuButtonMov');
+          if (lengua.innerHTML == 'English') 
+              lengua.innerHTML = 'Español';
+          else lengua.innerHTML = 'English';
+        
+            $("#name1").attr("placeholder", "Name:");
+            $("#client1").attr("placeholder", "Company:");
+            $("#email1").attr("placeholder", "Email:");
+            $("#phone1").attr("placeholder", "Phone number:");
+            $("#subject1").attr("placeholder", "Subject:");
+            $("#message1").attr("placeholder", "Message:");
+            $("#lang").val("en");
+            $(".imgtraditional").attr("src", "images/English/TIPOS DE SALSA_TRADICIONAL.png");
+            $(".imggreen").attr("src", "images/English/TIPOS DE SALSA__GREEN.png");
+            $(".imgchip").attr("src", "images/English/TIPOS DE SALSA_CHIPOTLE.png");
+            
+            $("#pop_tradicional").attr("src", "images/English/TRADICIONAL_EN.png");
+            $("#pop_verde").attr("src", "images/English/VERDE_EN.png");
+            $("#pop_chipotle").attr("src", "images/English/CHIPOTLE_EN.png");
+          
+
     }
                 
 
