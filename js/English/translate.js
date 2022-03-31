@@ -31,7 +31,7 @@ var local = {
   },
   "les gusta": {
     es: "les gusta",
-    en: "&ensp;loves it",
+    en: "&ensp;  loves it",
   },
   "La Chula es una salsa poblana": {
     es:
